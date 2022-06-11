@@ -4,6 +4,7 @@ import PageNotFound from "../Pages/NotFound";
 import List from '../Pages/Pilots/List';
 import Motos from '../Pages/Motos/Motos';
 import Circuits from "../Pages/Circuits/Circuits";
+import Form from "../Pages/Form/Form";
 import Details from "../Pages/Details/Details";
 
 const routes = [
@@ -35,6 +36,11 @@ const routes = [
   {
     path: "/detail/:id",
     element: <Details />,
+    isPrivate: true
+  },
+  {
+    path: "form",
+    element: <Form />,
     isPrivate: true
   },
 ];

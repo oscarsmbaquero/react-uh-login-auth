@@ -4,8 +4,8 @@ import { loginUser, useAuthState, useAuthDispatch } from "../../Context";
 import styles from "./login.module.css";
 
 function Login(props) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("nero@admin.com");
+  const [password, setPassword] = useState("admin123");
   const dispatch = useAuthDispatch();
   let navigate = useNavigate();
   const { loading, errorMessage } = useAuthState(); //lee los valores del loading y errorMessages del contexto

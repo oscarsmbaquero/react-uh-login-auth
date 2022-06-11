@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 import './Header.scss';
 import { Link } from 'react-router-dom';
 import { AuthStateContext } from '../../Context/context';
+import { useAuthState } from "../../Context";
+import { GoSignOut } from "react-icons/go";
+
 
 const Header = () => {
   let navigate = useNavigate();
@@ -11,6 +14,7 @@ const Header = () => {
   //const userDetails = useAuthState(); //lee los detalles del usuario del contexto
   const [ userLogger, setUserLogger]= useState(false);
   const { user } = useContext(AuthStateContext);
+  const userDetails = useAuthState(); //lee los detalles del usuario del contexto
 
    useEffect(()=>{
     if (user){
@@ -42,9 +46,14 @@ const Header = () => {
         <Link to="/form">
           <button class="button">Formulario</button>
         </Link>
+        <div>
+          
+        </div>
+        
     </div>
-    <div>
-    <button class="button__logout"  onClick={handleLogout}>logout</button>
+    <div class="logout">
+    <p>{userDetails.user.email}</p>
+    <button class="button__logout"  onClick={handleLogout}><GoSignOut  /></button>
     </div>    
         
      </header> : '' }
