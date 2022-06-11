@@ -1,0 +1,67 @@
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.flip-container {
+    background-color: transparent;
+    margin-top: 10rem;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin:0 auto;
+  }  
+  .card {
+    margin: 10px 10px 10px 10px;
+    position: relative;
+    display:inline-block;
+    width: 90%;
+    height: 98%;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+  }  
+  .card h3, .card p, .card h6 {
+    display:block;
+    color:white;
+  }
+  .card h5{
+    color:red;
+  }
+  /* GIRA HORIZONTAL */
+  .flip-container:hover .card {
+    transform: rotateY(180deg);
+  }
+  .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  
+  .front {
+    color: white;
+    display: flex;
+  }
+  
+  .back {
+    background-color: #202223;
+    color: red;
+    transform: rotateY(180deg);
+    text-align:center;
+  }
+  .flex-item-image-detail {
+    border-radius: 10%;
+    padding: 10px;
+    height: 280px;
+    width:280px;
+  }
+  
+  .card-header{
+  border-radius: 2px;
+  }
+  

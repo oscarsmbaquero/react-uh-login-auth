@@ -1,0 +1,13 @@
+
+.footer {
+    display: flex;    
+    min-width: 100%;
+    justify-content: center;    
+    background-color: whitesmoke;
+    box-shadow: 4px 2px 2px 1px rgba(0.5, 0.3, 0.2, 0.2);
+      &__image{
+           margin: 10px;
+           width: 30px;
+           height: 30px;
+      }     
+    }

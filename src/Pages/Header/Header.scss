@@ -1,0 +1,28 @@
+.header {
+    text-decoration: none;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+    }
+ .button{
+    width: 80px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 15px;
+    //border-color: red;
+    color:white;
+    background-color: black;    
+ }
+ .button__logout{
+   width: 80px;
+   height: 30px;
+   margin-right: 20px;
+   border-radius: 15px;
+   //border-color: red;
+   color:white;
+   background-color:red;    
+ }
+ 
