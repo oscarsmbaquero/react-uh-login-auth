@@ -23,7 +23,7 @@
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
-     width: 25%;
+     width: 10%;
      height: 100%;
  }
  .card-1 img{
@@ -45,4 +45,11 @@
      margin-bottom: 2px;
      color: #333333;
      font-family: 'OpenSans-Bold';
+ }
+ .buttons{
+    margin-top: 0;
+    display:flex;
+    justify-content: right;
+    padding: 20px;
+    
  }

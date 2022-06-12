@@ -17,12 +17,14 @@ const List = () => {
  
    useEffect(() => {
      setIsLoading(true);//mostramos loading
-     fetch('https://motogp-oscar.herokuapp.com/pilots')
+     fetch('http://localhost:5000/pilots')
        .then(response => response.json())
        .then(data => setPilots(data))
-       .finally(() => setIsLoading(false));//ocultamos el loading
+       .finally(() => setIsLoading(false))//ocultamos el loading
    }, []); //El array vacío es el estado inicial y el effect no se volverá a ejecutar cuando su contenido cambie
-   console.log(pilots);
+   
+   
+   
    const loading  = (isLoading) ? <ClipLoader color={'#D0021B'}size={100}  loading={isLoading}   />: null;
    
  
