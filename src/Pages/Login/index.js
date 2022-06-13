@@ -4,8 +4,8 @@ import { loginUser, useAuthState, useAuthDispatch } from "../../Context";
 import styles from "./login.module.css";
 
 function Login(props) {
-  const [email, setEmail] = useState("nero@admin.com");
-  const [password, setPassword] = useState("admin123");
+  const [email, setEmail] = useState("Otto");
+  const [password, setPassword] = useState("0810");
   const dispatch = useAuthDispatch();
   let navigate = useNavigate();
   const { loading, errorMessage } = useAuthState(); //lee los valores del loading y errorMessages del contexto
@@ -15,9 +15,10 @@ function Login(props) {
 
     try {
       let response = await loginUser(dispatch, { email, password });
-      // console.log(response);
-      if (!response.user) return;
+       console.log(response,'response-index');
+      if (!response) return;
       navigate("/dashboard");
+      console.log('dashboard');
     } catch (error) {
       console.log(error);
     }
@@ -53,6 +54,9 @@ function Login(props) {
           </div>
           <button onClick={handleLogin} disabled={loading}>
             login
+          </button>
+          <button onClick={handleLogin} disabled={loading}>
+            Register
           </button>
         </form>
       </div>
