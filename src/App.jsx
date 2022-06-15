@@ -12,23 +12,31 @@ import './App.scss';
 
 //import Header from "./Pages/Header/Header";
 
+
+
+
+
+
+
+
 function App() {
   return (
+   
+  
+        <AuthProvider> 
+          <Router>
+          <Header />
+            <Routes>
+              {routes.map((route) => (
+                <Route key={route.path} path={route.path} element={route.element} />
+              ))}
+              <Route element={<AppRoutes />} path="/dashboard" />
+            </Routes>
+          </Router>
+          <Footer></Footer>
+        </AuthProvider>
+      
 
-    <AuthProvider> 
-      {/* <Header></Header>      */}
-      <Router>
-      <Header /> 
-        <Routes>
-          {routes.map((route) => (
-            <Route key={route.path} path={route.path} element={route.element} />
-          ))}
-          <Route element={<AppRoutes />} path="/dashboard" />
-          {/* <Route element={<AppRoutes />} path="/footer" /> */}
-        </Routes>
-      </Router>
-      <Footer></Footer>
-    </AuthProvider>
   );
 }
 
