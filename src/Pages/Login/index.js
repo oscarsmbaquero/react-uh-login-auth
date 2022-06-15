@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { loginUser, useAuthState, useAuthDispatch } from "../../Context";
+import { loginUser, useAuthState, useAuthDispatch,register } from "../../Context";
 import styles from "./login.module.css";
 
 function Login(props) {
-  const [email, setEmail] = useState("Otto");
-  const [password, setPassword] = useState("0810");
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
   const dispatch = useAuthDispatch();
   let navigate = useNavigate();
   const { loading, errorMessage } = useAuthState(); //lee los valores del loading y errorMessages del contexto
@@ -23,16 +23,29 @@ function Login(props) {
       console.log(error);
     }
   };
+  const handleRegister = async (e) => {
+    e.preventDefault();
+
+    try {
+      let response = await register(dispatch, { email, password });
+       console.log(response,'response-index');
+      if (!response) return;
+      navigate("/dashboard");
+      console.log('dashboard');
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className={styles.container}>
       <div className={{ width: 200 }}>
-        <h1>Login Page</h1>
+        <h1 className={styles.textTitle}>Login</h1>
         {errorMessage ? <p className={styles.error}>{errorMessage}</p> : null}
         <form>
           <div className={styles.loginForm}>
             <div className={styles.loginFormItem}>
-              <label htmlFor="email">Username</label>
+              <label  className={styles.label} htmlFor="email">Username</label>
               <input
                 type="text"
                 id="email"
@@ -42,7 +55,7 @@ function Login(props) {
               />
             </div>
             <div className={styles.loginFormItem}>
-              <label htmlFor="password">Password</label>
+              <label className={styles.label} htmlFor="password">Password</label>
               <input
                 type="password"
                 id="password"
@@ -52,10 +65,10 @@ function Login(props) {
               />
             </div>
           </div>
-          <button onClick={handleLogin} disabled={loading}>
+          <button class="button"onClick={handleLogin} disabled={loading}>
             login
           </button>
-          <button onClick={handleLogin} disabled={loading}>
+          <button class="button" onClick={handleRegister} disabled={loading}>
             Register
           </button>
         </form>

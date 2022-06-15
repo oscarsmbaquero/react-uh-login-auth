@@ -1,4 +1,4 @@
-@media (min-width: 501px) {
+@media (min-width: 1001px) {
     .card-1 .info>.name{
          font-size: 35px;
     }
@@ -10,46 +10,65 @@
  }
   
  .card-1{
-     border: solid black 1px;
-     height: 125px;
+    margin: 2rem 1rem 2rem 1rem;
+    display:flex;
+    flex-direction: column-reverse;
+     border: solid black 2px;
+     height: 250px;
      position: relative;
-     margin-bottom: 15px;
+     
  }
  .card-1 .user{
-     position: absolute;
-     left: 0;
-     top: 0;
+     position: sticky;
+    //  left: 0;
+    //  top: 0;
      background-color: #147896;
-     background-position: center;
-     background-repeat: no-repeat;
+    //  background-position: center;
+    //  background-repeat: no-repeat;
      background-size: cover;
      width: 10%;
      height: 100%;
  }
  .card-1 img{
-    margin-top: 10px;
-     height: 100px;
+    margin-top: 20px;
+     height: 200px;
      width: 100px;
+     
  }
   
  .card-1 .info{
+    display:flex;
+    flex-direction: column;
      position: absolute;
      right: 0;
      top: 0;
-     width: 55%;
+     width: 85%;
      height: 100%;
-     padding: 10px
+     padding: 10px;
+     font-size: 30px;
  }
   
- .card-1 .info>.name{    
-     margin-bottom: 2px;
-     color: #333333;
-     font-family: 'OpenSans-Bold';
- }
+ 
+ .card-1 .info>.cargo{    
+    margin-left: 60px;
+
+    color: #333333;
+    font-family: 'OpenSans-Bold';
+}
+.card-1 .info>.numero{    
+    margin-left: 30px;
+
+    color: #333333;
+    font-family: 'OpenSans-Bold';
+}
  .buttons{
-    margin-top: 0;
+    // margin-top: 0;
     display:flex;
-    justify-content: right;
+    margin-bottom: 0rem;
+    // justify-content: right;
     padding: 20px;
     
  }
+
+ 
+

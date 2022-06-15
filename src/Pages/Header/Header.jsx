@@ -22,7 +22,7 @@ const Header = () => {
     }
     
    },[user])
-
+   
   const handleLogout = () => {
     logout(dispatch); //llama a la acción logout
     navigate("/"); //navega de nuevo al login sin usuario
@@ -32,32 +32,28 @@ const Header = () => {
   return (
     <>
     { userLogger ? 
-    <header className="header">
-    <div>
-        <Link to="/list">
-          <button class="button">Pilots</button>
-        </Link>
-        <Link to="/motos">
-          <button class="button">Motos</button>
-        </Link>
-        <Link to="/circuits">
-          <button class="button">Circuitos</button>
-        </Link>
-        <Link to="/form">
-          <button class="button">Formulario</button>
-        </Link>
+     <header className="header">
         <div>
-          
+          <Link to="/list">
+            <button class="button">Pilots</button>
+          </Link>
+          <Link to="/motos">
+            <button class="button">Motos</button>
+          </Link>
+          <Link to="/circuits">
+            <button class="button">Circuitos</button>
+          </Link>
+          <Link to="/form">
+            <button class="button">Formulario</button>
+          </Link>        
         </div>
-        
-    </div>
-    <div class="logout">
-    <p>{userDetails.user.email}</p>
-    <button class="button__logout"  onClick={handleLogout}><GoSignOut  /></button>
-    </div>    
+        <div class="logout">
+            <p>{userDetails.user.email}</p>
+            <button class="button__logout"  onClick={handleLogout}><GoSignOut  /></button>
+        </div>    
         
      </header> : '' }
-  </>  
+    </>  
      
     
     

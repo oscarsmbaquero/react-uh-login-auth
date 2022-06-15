@@ -20,7 +20,9 @@ function Dashboard(props) {
   // };
   return (
     <>
+      
       <div style={{ padding: 10 }}>
+      
         <div className={styles.dashboardPage}>
           {/* <Header></Header> */}
         </div>

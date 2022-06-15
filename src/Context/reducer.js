@@ -29,6 +29,19 @@ export const AuthReducer = (initialState, action) => {
         token: action.payload.auth_token,
         loading: false
       };
+      case "REQUEST_REGISTER":
+      return {
+        ...initialState,
+        loading: true
+      };
+      case "REGISTER_SUCCESS":
+      //console.log('Si')
+      return {
+        ...initialState,
+        user: action.payload.user,
+        token: action.payload.auth_token,
+        loading: false
+      };
     case "LOGOUT":
       return {
         ...initialState,

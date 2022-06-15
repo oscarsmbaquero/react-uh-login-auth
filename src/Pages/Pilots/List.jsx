@@ -34,7 +34,7 @@ const List = () => {
          { loading }
          { pilots.map((post, key) => (
          
-           <div key={ key } class="flip-container">           
+           <div key={ key } class="flip-container">
                 <div class="card">
                     <div class="front">
                         <img class="flex-item-image-detail"src={post.image} alt={post.name}/>

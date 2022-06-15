@@ -69,10 +69,7 @@ const Form = () => {
                             </Link>
                             <Link to={`/pilots/delete/${post._id}`}>
                               <button class="button" onClick={(e)=> deletePilot(e,post._id)}>Eliminar</button>
-                            </Link>
-                            <Link to={`/pilots/name/${post.name}`}>
-                              <button class="button">Edit</button>
-                            </Link>    
+                            </Link>   
                           </div>
                           
                       </div>

@@ -5,6 +5,7 @@ import routes from "./Config/routes.js";
 import { AuthProvider } from "./Context";
 import Footer from "./Pages/Footer/Footer";
 import Header from "./Pages/Header/Header";
+import './App.scss';
 //import Footer from "./Pages/Footer/Footer";
 //import Header from "./Pages/Header/Header";
 //import Header from "./Pages/Header/Header";

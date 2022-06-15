@@ -1,12 +1,18 @@
 .container {
+  
     min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    
   }
   .formContainer {
     width: 200px;
+    border-radius: 50px;
+    
+    
   }
   .error {
     font-size: 0.8rem;
@@ -16,10 +22,22 @@
   .loginForm {
     display: flex;
     flex-direction: column;
+    
   }
    
   .loginFormItem {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  .textTitle{
+    margin-left: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:red;
+  }
+  .label{
+    margin-bottom: 10px;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
