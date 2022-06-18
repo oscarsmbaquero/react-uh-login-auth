@@ -5,7 +5,7 @@ import React from "react";
 //import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //import Header from "../Header/Header";
 //import { useNavigate } from "react-router-dom";
-import styles from "./dashboard.module.css";
+import styles from "./dashboard.module.scss";
 //import Header from "../Header/Header";
 //import Footer from '../Footer/Footer'
 
@@ -21,10 +21,10 @@ function Dashboard(props) {
   return (
     <>
       
-      <div style={{ padding: 10 }}>
-      
+      <div style={{ padding: 10 }} >
+     
         <div className={styles.dashboardPage}>
-          {/* <Header></Header> */}
+        {/* <img  src ="/images/fondoMotogp2.png" class="imageDashboard" alt="motogp"/> */}
         </div>
        
     </div>

@@ -1,13 +1,18 @@
 .header {
     text-decoration: none;
     background-color: whitesmoke;
+    background-image: linear-gradient(to right,whitesmoke,red,black);
+    backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
     height: 90px;
-    box-shadow: 3px 3px red, -1em 0 0.4em olive;
+    // box-shadow: 3px 3px red, -1em 0 0.4em olive;
     margin-top: 10px;
+    }
+    .image{
+      width: 150px;
     }
 //  .button{
 //     width: 80px;
@@ -34,10 +39,10 @@
    align-items: center;
    padding:10px;
    
-   p{
+   & p{
       margin-right:20px;
       font-size: 20px;
-      // color:red;
+      color:whitesmoke;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-size: 30px;
    }

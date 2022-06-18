@@ -3,12 +3,15 @@ import { Link } from 'react-router-dom'
 import './Form.scss';
 import ClipLoader from "react-spinners/ClipLoader";
 import Swal from "sweetalert2"
+import SearchInput from '../../Components/Search/SearchInput';
+
 
 
 
 const Form = () => {
     let [pilots, setPilots] = React.useState([]);
    let [isLoading, setIsLoading] = useState(false);
+   const [keyword, setKeyword] = useState("");
    useEffect(() => {
     setIsLoading(true);//mostramos loading
     fetch('http://localhost:5000/pilots')
@@ -40,12 +43,25 @@ const Form = () => {
   }
   //console.log(pilots);
   const loading  = (isLoading) ? <ClipLoader color={'#D0021B'}size={100}  loading={isLoading}   />: null;
-  
+  // console.log(pilots[1].name);
+  const filteredPilots = pilots.filter(
+    (pilots) =>
+      pilots.name.toLowerCase().includes(keyword) 
+    );
+
+  // //Hago una función generica que me ejecute el seteado de la variable de estado keyword con cualquier input al que se lo adjudique
+  const onInputChange = (e) => {
+    e.preventDefault();
+    setKeyword(e.target.value.toLowerCase());
+  };
+  console.log(filteredPilots,'filter')
 
   return (
       <div >      
         { loading }
-        { pilots.map((post, key) => (        
+        <SearchInput placeholder="Filter by pilot " onChange={onInputChange} />
+        {/* <FilerPilots pilots={filteredPilots}/> */}
+        { filteredPilots.map((post, key) => (        
                      
           <div key={ key } class="row">                                      
               <div >

@@ -10,7 +10,7 @@ import { IntlProvider, FormattedMessage } from "react-intl";
 
 import Spanish from "../../lang/es.json";
 import English from "../../lang/en.json";
-import I18n from '../../Components/I18n';
+import I18n from '../I18n';
 
 export const ContextI18n = React.createContext();
 
@@ -67,6 +67,10 @@ const Header = () => {
                 <>
                 { userLogger ? 
                 <header className="header">
+                    <div>
+                    <img  src ="/images/fondoMotogp.png" class="image" alt="motogp"/>
+                       {/* <img  src ="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/95/52/6d/95526ddc-639b-ab76-2796-296bf559ee0f/AppIcon-1x_U007emarketing-0-8-0-85-220.png/1200x630wa.png" class="image" alt="motogp"/>       */}
+                    </div>
                     <div>
                         <Link to="/list">
                         <p class="p">
