@@ -7,6 +7,7 @@ import Circuits from "../Pages/Circuits/Circuits";
 import Form  from "../Pages/Form/Form";
 import Details from "../Pages/Details/Details";
 import Delete from "../Pages/Delete/Delete";
+import AddPilots from "../Pages/AddPilots/AddPilots";
 
 const routes = [
   {
@@ -47,6 +48,11 @@ const routes = [
   {
     path: "form",
     element: <Form />,
+    isPrivate: true
+  },
+  {
+    path: "addPilot",
+    element: <AddPilots />,
     isPrivate: true
   },
 ];

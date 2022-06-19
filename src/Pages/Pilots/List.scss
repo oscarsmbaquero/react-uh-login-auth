@@ -53,6 +53,13 @@
     color: red;
     transform: rotateY(180deg);
     text-align:center;
+   
+
+    & p{
+      color:red;
+      font-family: 'Times New Roman', Times, serif;
+    }
+   
   }
   .flex-item-image-detail {
     border-radius: 10%;

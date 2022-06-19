@@ -12,9 +12,10 @@ const Form = () => {
     let [pilots, setPilots] = React.useState([]);
    let [isLoading, setIsLoading] = useState(false);
    const [keyword, setKeyword] = useState("");
+   
    useEffect(() => {
     setIsLoading(true);//mostramos loading
-    fetch('http://localhost:5000/pilots')
+    fetch('https://motogp-oscar.herokuapp.com/pilots')
       .then(response => response.json())
       .then(data => setPilots(data))
       .finally(() => setIsLoading(false));//ocultamos el loading

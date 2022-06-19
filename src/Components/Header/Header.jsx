@@ -67,46 +67,61 @@ const Header = () => {
                 <>
                 { userLogger ? 
                 <header className="header">
-                    <div>
-                    <img  src ="/images/fondoMotogp.png" class="image" alt="motogp"/>
-                       {/* <img  src ="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/95/52/6d/95526ddc-639b-ab76-2796-296bf559ee0f/AppIcon-1x_U007emarketing-0-8-0-85-220.png/1200x630wa.png" class="image" alt="motogp"/>       */}
+                    <div >
+                      <img  src ="/images/fondoMotogp.png" class="image" alt="motogp"/>
+                        {/* <img  src ="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/95/52/6d/95526ddc-639b-ab76-2796-296bf559ee0f/AppIcon-1x_U007emarketing-0-8-0-85-220.png/1200x630wa.png" class="image" alt="motogp"/>       */}
                     </div>
-                    <div>
-                        <Link to="/list">
-                        <p class="p">
-                          <FormattedMessage
-                            id="app.pilots"
-                          />
-                        </p>              
-                          </Link>
-                    </div>
-                    <div>      
-                          <Link to="/motos">
-                        <p class="p">
-                          <FormattedMessage
-                            id="app.motos"
-                          />
-                        </p>               
-                          </Link>
-                    </div>
-                    <div>      
-                          <Link to="/circuits">
-                        <p class="p">
+                    <div class="options">
+                      <div>
+                          <Link to="/list">
+                          <p class="p">
                             <FormattedMessage
-                              id="app.circuits"
+                              id="app.pilots"
                             />
-                        </p>              
-                          </Link>
-                    </div> 
-                    <div>     
-                          <Link to="/form">
-                        <p class="p">
+                          </p>              
+                            </Link>
+                      </div>
+                      <span class="span">/</span>
+                      <div>      
+                            <Link to="/motos">
+                          <p class="p">
                             <FormattedMessage
-                              id="app.form"
+                              id="app.motos"
                             />
-                        </p>                
-                          </Link>
-                    </div> 
+                          </p>               
+                            </Link>
+                      </div>
+                      <span class="span">/</span>
+                      <div>      
+                            <Link to="/circuits">
+                          <p class="p">
+                              <FormattedMessage
+                                id="app.circuits"
+                              />
+                          </p>              
+                            </Link>
+                      </div>
+                      <span class="span">/</span>
+                      <div>     
+                            <Link to="/form">
+                          <p class="p">
+                              <FormattedMessage
+                                id="app.form"
+                              />
+                          </p>                
+                            </Link>
+                      </div> 
+                      <span class="span">/</span>
+                      <div>     
+                            <Link to="/addPilot">
+                          <p class="p">
+                              <FormattedMessage
+                                id="app.form"
+                              />
+                          </p>                
+                            </Link>
+                      </div> 
+                    </div>
                     <div>     
                           <I18n/>
                     </div>

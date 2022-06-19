@@ -6,6 +6,8 @@
     justify-content: center;    
     background-image: transparent;
     height: 70px;
+    position:fixed;
+    bottom: 0;
     
     
       &__image{
@@ -13,5 +15,6 @@
            width: 30px;
            height: 30px;
            padding-top: 20px;
+           
       }     
     }

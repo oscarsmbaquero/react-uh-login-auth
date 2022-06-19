@@ -1,28 +1,22 @@
 .header {
     text-decoration: none;
-    background-color: whitesmoke;
-    background-image: linear-gradient(to right,whitesmoke,red,black);
+    background-color: transparent;
     backdrop-filter: blur(5px);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 90px;
+    height: 60px;
     // box-shadow: 3px 3px red, -1em 0 0.4em olive;
     margin-top: 10px;
     }
     .image{
       width: 150px;
+      display:flex;
+      justify-content: left;
+      position: sticky;
     }
-//  .button{
-//     width: 80px;
-//     height: 30px;
-//     margin-left: 10px;
-//     border-radius: 15px;
-//     //border-color: red;
-//     color:white;
-//     background-color:red;    
-//  }
+
  .button__logout{
    width: 40px;
    height: 40px;
@@ -42,7 +36,7 @@
    & p{
       margin-right:20px;
       font-size: 20px;
-      color:whitesmoke;
+      color:black;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       font-size: 30px;
    }
@@ -56,5 +50,18 @@
  .p:hover{
   background-color: black;
   color:whitesmoke;
+ }
+
+ .options{
+  display:flex;
+  justify-content: center;
+
+  & span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+  }
  }
  
