@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AppRoutes from "./Components/AppRoutes";
 import routes from "./Config/routes.js";
 import { AuthProvider } from "./Context";
-import Footer from "./Components/Footer/Footer";
+// import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import './App.scss';
 //import Image from "../src/images/fondoMotoGp2.png";
@@ -38,7 +38,7 @@ function App() {
               <Route element={<AppRoutes />} path="/dashboard" />
             </Routes>
           </Router>
-          <Footer/>
+          {/* <Footer/> */}
         </AuthProvider>
    </>
     

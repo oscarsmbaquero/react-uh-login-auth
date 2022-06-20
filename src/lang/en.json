@@ -2,5 +2,6 @@
     "app.pilots": "Pilots",
     "app.motos": "Motorcicles",
     "app.circuits": "Circuits",
-    "app.form":"Form"
+    "app.form":"Form",
+    "app.addPilot":"Add Pilot"
   }

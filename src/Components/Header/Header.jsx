@@ -14,9 +14,6 @@ import I18n from '../I18n';
 
 export const ContextI18n = React.createContext();
 
-
-
-
 const Header = () => {
 
   const [locale, setLocale] = useState(navigator.language);
@@ -74,51 +71,41 @@ const Header = () => {
                     <div class="options">
                       <div>
                           <Link to="/list">
-                          <p class="p">
-                            <FormattedMessage
-                              id="app.pilots"
-                            />
-                          </p>              
-                            </Link>
+                              <p class="p">
+                                <FormattedMessage id="app.pilots"/>
+                              </p>              
+                          </Link>
                       </div>
                       <span class="span">/</span>
                       <div>      
                             <Link to="/motos">
                           <p class="p">
-                            <FormattedMessage
-                              id="app.motos"
-                            />
+                            <FormattedMessage id="app.motos"/>
                           </p>               
                             </Link>
                       </div>
                       <span class="span">/</span>
                       <div>      
                             <Link to="/circuits">
-                          <p class="p">
-                              <FormattedMessage
-                                id="app.circuits"
-                              />
-                          </p>              
+                              <p class="p">
+                                  <FormattedMessage id="app.circuits"/>
+                              </p>              
                             </Link>
                       </div>
                       <span class="span">/</span>
                       <div>     
                             <Link to="/form">
-                          <p class="p">
-                              <FormattedMessage
-                                id="app.form"
-                              />
-                          </p>                
+                              <p class="p">
+                                  <FormattedMessage id="app.form"/>
+                              </p>                
                             </Link>
                       </div> 
                       <span class="span">/</span>
                       <div>     
                             <Link to="/addPilot">
-                          <p class="p">
-                              <FormattedMessage
-                                id="app.form"
-                              />
-                          </p>                
+                              <p class="p">
+                                  <FormattedMessage id="app.addPilot"/>
+                              </p>                
                             </Link>
                       </div> 
                     </div>

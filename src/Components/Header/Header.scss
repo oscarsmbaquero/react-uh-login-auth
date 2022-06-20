@@ -1,17 +1,19 @@
 .header {
     text-decoration: none;
-    background-color: transparent;
+    // background-color: whitesmoke;
+    background-image: transparent;
     backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 60px;
-    // box-shadow: 3px 3px red, -1em 0 0.4em olive;
-    margin-top: 10px;
+    box-shadow: 3px 3px red, -1em 0 0.4em olive;
+    
     }
     .image{
       width: 150px;
+      height: 60px;
       display:flex;
       justify-content: left;
       position: sticky;

@@ -1,12 +1,13 @@
 import React from 'react';
 import { useForm } from 'react-hook-form'
+import {  useNavigate } from "react-router-dom";
 import './AddPilots.scss';
 
 
 const AddPilots = () => {
 
     const {register, handleSubmit, formState: {errors, isValid}} = useForm({mode: "onChange"});
-
+    let navigate = useNavigate();
     const onSubmit = async (formData) => {
         console.log(formData);
         try {
@@ -19,11 +20,15 @@ const AddPilots = () => {
                body: JSON.stringify(formData),
             })
             const resData = await result.json();
+            navigate("/list");
             console.log(resData);
+        
+            
             
         } catch (error) {
            console.log(error); 
         }
+        
     }
   return (
    
@@ -51,11 +56,12 @@ const AddPilots = () => {
             <input type="text" name="image" placeholder="Url of image"  {...register('image')}/>
         </label>
         <br></br>
-        <button class="button"disabled={!isValid}>Send</button>
+        <button class="buttonForm"disabled={!isValid}>Send</button>
         </div>
     </form>
     
   )
+  
 }
 
 export default AddPilots
