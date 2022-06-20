@@ -1,6 +1,6 @@
 import React, { useState, useEffect }  from 'react';
 import './List.scss';
-import ClipLoader from "react-spinners/ClipLoader";
+import Loader from "../../Components/Loader/Loader";
 import { Link } from 'react-router-dom';
 import Swal from "sweetalert2"
 import SearchInput from '../../Components/Search/SearchInput';
@@ -13,15 +13,20 @@ import SearchInput from '../../Components/Search/SearchInput';
 const List = () => {
    //Definimos el array de posts
    let [pilots, setPilots] = React.useState([]);
-   let [isLoading, setIsLoading] = useState(false);
+   //let [isLoading, setIsLoading] = useState(false);
    const [keyword, setKeyword] = useState("");
+   const [isLoaded, setIsLoaded] = useState(false);
+
+   setTimeout(() => {
+    setIsLoaded(true);
+  }, 3000);
  
    useEffect(() => {
-     setIsLoading(true);//mostramos loading
+     //setIsLoading(true);//mostramos loading
      fetch('http://localhost:5000/pilots')
        .then(response => response.json())
        .then(data => setPilots(data))
-       .finally(() => setIsLoading(false))//ocultamos el loading
+       //.finally(() => setIsLoading(false))//ocultamos el loading
    }, []);
    
    const deletePilot = (e, pilots) => {
@@ -40,7 +45,7 @@ const List = () => {
       fetch('http://localhost:5000/pilots')
       .then(response => response.json())
       .then(data => setPilots(data))
-      .finally(() => setIsLoading(false));
+      //.finally(() => setIsLoading(false));
       
     }
     })
@@ -48,7 +53,7 @@ const List = () => {
    
    
    
-   const loading  = (isLoading) ? <ClipLoader color={'#D0021B'}size={100}  loading={isLoading}   />: null;
+  
    const filteredPilots = pilots.filter(
     (pilots) =>
       pilots.name.toLowerCase().includes(keyword) 
@@ -65,9 +70,10 @@ const List = () => {
     <>
     <SearchInput placeholder="Filter by pilot " onChange={onInputChange}  />
        <div class="container">
-       
-         { loading }
-        
+       {isLoaded === false ? (
+        <Loader />
+      ) : (
+        <>        
          { filteredPilots.map((post, key) => (         
            <div key={ key } class="flip-container">
                 <div class="card">
@@ -92,6 +98,8 @@ const List = () => {
                 </div> 
            </div>
            ))}
+           </>
+           )}
            {/* <Footer></Footer> */}
        </div>
        </>

@@ -1,5 +1,5 @@
 .container {
-    
+    margin-top: 200px;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -38,6 +38,6 @@
   }
   .label{
     margin-bottom: 10px;
-    color:#bb0000;
+    color:black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }

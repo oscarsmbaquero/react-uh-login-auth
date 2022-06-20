@@ -1,0 +1,41 @@
+.splashScreen {
+  
+  margin-top: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .fadeIn {
+    animation: fadeIn ease 3s;
+  }
+
+  .fadeOut {
+    animation: fadeOut ease 3s;
+  }
+
+  .image{
+    height: 300px;
+    width: 300px;
+  //  margin-left: 100px;
+}
+
+}
