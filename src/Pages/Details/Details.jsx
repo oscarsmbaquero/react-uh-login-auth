@@ -22,7 +22,7 @@ const Details = () => {
   <div>
   { !pilot ? <p>Cargando...</p> : <>
     <div class="details">
-      <div>
+      <div class="text">
        <h1> {pilot.data.pilot[0].name}</h1>
        <h2> {pilot.data.pilot[0].dorsal}</h2>
        <p>  {pilot.data.pilot[0].nacionality}</p>

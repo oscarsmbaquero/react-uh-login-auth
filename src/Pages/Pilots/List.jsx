@@ -84,7 +84,6 @@ const List = () => {
                           <p>{ post.name }</p> 
                           <p>{ post.dorsal }</p> 
                           <p>{ post.nacionality }</p>
-                          <p>{ post.moto?.length > 0 && post.moto[0].team}</p>
                         </div>
                     </div>
                 </div> 
