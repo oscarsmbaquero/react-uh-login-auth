@@ -47,7 +47,9 @@ const Header = () => {
 
    useEffect(()=>{
     if (user){
-      setUserLogger(true)
+      setUserLogger(true);
+    }else{
+      setUserLogger(false);
     }
     
    },[user])

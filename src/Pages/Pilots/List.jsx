@@ -74,7 +74,7 @@ const List = () => {
         <Loader />
       ) : (
         <>        
-         { filteredPilots.map((post, key) => (         
+         { filteredPilots.map((post, key) => (
            <div key={ key } class="flip-container">
                 <div class="card">
                     <div class="front">

@@ -12,7 +12,7 @@ function App() {
    <>  
         <AuthProvider> 
           <Router>
-          <Header />
+          <Header/>
             <Routes>
               {routes.map((route) => (
                 <Route key={route.path} path={route.path} element={route.element} />
