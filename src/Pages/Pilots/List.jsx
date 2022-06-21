@@ -13,7 +13,6 @@ import SearchInput from '../../Components/Search/SearchInput';
 const List = () => {
    //Definimos el array de posts
    let [pilots, setPilots] = React.useState([]);
-   //let [isLoading, setIsLoading] = useState(false);
    const [keyword, setKeyword] = useState("");
    const [isLoaded, setIsLoaded] = useState(false);
 
@@ -22,11 +21,9 @@ const List = () => {
   }, 3000);
  
    useEffect(() => {
-     //setIsLoading(true);//mostramos loading
      fetch('http://localhost:5000/pilots')
        .then(response => response.json())
        .then(data => setPilots(data))
-       //.finally(() => setIsLoading(false))//ocultamos el loading
    }, []);
    
    const deletePilot = (e, pilots) => {
@@ -41,18 +38,14 @@ const List = () => {
      }).then(res=>{
        if(res.status === 200){
         console.log('Borrado');
-      Swal.fire("Success", res.message,"success");
+      Swal.fire("Eliminado", res.message,"success");
       fetch('http://localhost:5000/pilots')
       .then(response => response.json())
       .then(data => setPilots(data))
-      //.finally(() => setIsLoading(false));
       
     }
     })
-  }//El array vacío es el estado inicial y el effect no se volverá a ejecutar cuando su contenido cambie
-   
-   
-   
+  }   
   
    const filteredPilots = pilots.filter(
     (pilots) =>

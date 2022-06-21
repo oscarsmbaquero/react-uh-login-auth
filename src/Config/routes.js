@@ -4,10 +4,10 @@ import PageNotFound from "../Pages/NotFound";
 import List from '../Pages/Pilots/List';
 import Motos from '../Pages/Motos/Motos';
 import Circuits from "../Pages/Circuits/Circuits";
-import Form  from "../Pages/Form/Form";
 import Details from "../Pages/Details/Details";
-import Delete from "../Pages/Delete/Delete";
+import DetailsMoto from "../Pages/DetailsMoto/DetailsMoto";
 import AddPilots from "../Pages/AddPilots/AddPilots";
+import AddTeam from "../Pages/AddTeam/AddTeam";
 
 const routes = [
   {
@@ -41,18 +41,18 @@ const routes = [
     isPrivate: true
   },
   {
-    path: "/pilots/delete/:_id",
-    element: <Delete />,
-    isPrivate: true
-  },
-  {
-    path: "form",
-    element: <Form />,
+    path: "addMoto",
+    element: <AddTeam />,
     isPrivate: true
   },
   {
     path: "addPilot",
     element: <AddPilots />,
+    isPrivate: true
+  },
+  {
+    path: "/motos/:id",
+    element: <DetailsMoto />,
     isPrivate: true
   },
 ];

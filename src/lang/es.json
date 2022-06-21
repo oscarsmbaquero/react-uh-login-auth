@@ -3,5 +3,6 @@
     "app.motos": "Motos",
     "app.circuits": "Circuitos",
     "app.form":"Formulario",
-    "app.addPilot":"Añadir Piloto"
+    "app.addPilot":"Añadir Piloto",
+    "app.addMoto":"Añadir Equipo"
   }

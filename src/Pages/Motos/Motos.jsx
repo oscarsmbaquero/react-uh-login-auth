@@ -1,41 +1,94 @@
 import React, { useState, useEffect } from 'react'
 import '../Pilots/List.scss';
+import Loader from "../../Components/Loader/Loader";
+import { Link } from 'react-router-dom';
+import Swal from "sweetalert2"
+import SearchInput from '../../Components/Search/SearchInput';
 
 const Motos = () => {
 
     let [motos, SetMotos] = React.useState([]);
-    let [isLoading, setIsLoading] = useState(false);
+    const [keyword, setKeyword] = useState("");
+    const [isLoaded, setIsLoaded] = useState(false);
 
-    useEffect(() => {
-        setIsLoading(true);//mostramos loading
-        fetch('https://motogp-oscar.herokuapp.com/motos')
-          .then(response => response.json())
-          .then(data => SetMotos(data))
-          .finally(() => setIsLoading(false));//ocultamos el loading
-      }, []); //El array vacío es el estado inicial y el effect no se volverá a ejecutar cuando su contenido cambie
-      console.log(motos);
-      const loading = (isLoading) ? 'Loading...' : null;
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 3000);
+
+   useEffect(() => {
+    fetch('http://localhost:5000/motos')
+      .then(response => response.json())
+      .then(data => SetMotos(data))
+  }, []);
+  const deleteMoto = (e, motos) => {
+    e.preventDefault();
+
+    const thisClicked = e.currentTarget;
+    thisClicked.innerText ="Borrando"  ;
+
+    fetch(`https://motogp-oscar.herokuapp.com/motos/delete/${motos}`,{
+     method: 'DELETE',
+     }).then(res=>{
+       if(res.status === 200){
+        console.log('Borrado');
+      Swal.fire("Eliminado", res.message,"success");
+      fetch('http://localhost:5000/motos')
+      .then(response => response.json())
+      .then(data => SetMotos(data))
+      
+    }
+    })
+  }
+  const filteredMotos = motos.filter(
+    (motos) =>
+    motos.mark.toLowerCase().includes(keyword) 
+    );
+
+  // //Hago una función generica que me ejecute el seteado de la variable de estado keyword con cualquier input al que se lo adjudique
+  const onInputChange = (e) => {
+    e.preventDefault();
+    setKeyword(e.target.value.toLowerCase());
+  };
+  console.log(filteredMotos,'filter')
+      
 
       return (
-        <fieldset>
+      <>
+        <SearchInput placeholder="Filter by team " onChange={onInputChange}  />
            <div class="container">
-             { loading }
-             { motos.map((post, key) => (
+            {isLoaded === false ? (
+               <Loader />
+            ) : (
+              <>
+             { filteredMotos.map((post, key) => (
                <div key={ key } class="flip-container">
                     <div class="card">
                         <div class="front">
                             <img class="flex-item-image-detail"src={post.image} alt={post.mark}/>
                         </div>  
                         <div class="back">
+                        <div class="buttons2">
+                            <Link to={`/motos/${post._id}`}>
+                              <button class="button">Más</button>
+                            </Link>
+                            <Link to={`/pilots/delete/${post._id}`}>
+                              <button class="button" onClick={(e)=> deleteMoto(e,post._id)}>Eliminar</button>
+                            </Link>
+                        </div>
                             <p>{ post.mark }</p> 
                             <p>{ post.cv }</p> 
                             <p>{ post.weight }</p>
-                            <button>Mas info</button>
+                            
                         </div>
                     </div>
-               </div>))}
-           </div>
-         </fieldset>);
+               </div>
+               ))}
+               </>
+               )}
+               </div>
+         </>
+         
+         );
 }
 
 export default Motos

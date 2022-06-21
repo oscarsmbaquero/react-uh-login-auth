@@ -96,9 +96,9 @@ const Header = () => {
                       </div>
                       <span class="span">/</span>
                       <div>     
-                            <Link to="/form">
+                            <Link to="/addMoto">
                               <p class="p">
-                                  <FormattedMessage id="app.form"/>
+                                  <FormattedMessage id="app.addMoto"/>
                               </p>                
                             </Link>
                       </div> 
