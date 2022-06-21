@@ -1,7 +1,10 @@
+//import { Button } from '@mui/material';
+
 import React from 'react';
 import { useForm } from 'react-hook-form'
 import {  useNavigate } from "react-router-dom";
 import './AddTeam.scss';
+
 
 const AddTeam = () => {
 
@@ -32,13 +35,12 @@ const AddTeam = () => {
     }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} class="form">
+  <form onSubmit={handleSubmit(onSubmit)} class="form">
     <div >
        <label>
            <p>Mark</p>
            <input type="text" name="name" placeholder="Mark" {...register('mark', {
                required: 'Mark is required',
-              
            })}/>
            {errors.name && errors.name.type === 'required' && <p>{errors.name.message}</p>}
        </label>
@@ -60,8 +62,8 @@ const AddTeam = () => {
        </label>
        <br></br>
        <button class="buttonForm"disabled={!isValid}>Send</button>
-       </div>
-   </form>
+    </div>
+  </form>
   )
 }
 

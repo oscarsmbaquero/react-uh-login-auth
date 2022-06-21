@@ -1,0 +1,16 @@
+.details{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+
+    & h1{
+        color:red;
+        font-size: 35px;
+    }
+    & img{
+        width: 500px;
+        height:500px;
+    }
+}

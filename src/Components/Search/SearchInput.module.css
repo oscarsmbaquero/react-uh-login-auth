@@ -1,19 +1,13 @@
 .wrapper {
   display: flex;
-  margin-top: 30px;
-  
-  justify-content: center;
-  background-color: whitesmoke;
- 
+  margin-top: 30px;  
+  justify-content: center; 
   padding-left: 16px;
   color: white;
-  /* height: 60px;
-  width: 200px; */
 }
 
 .input {
   align-items: center;
-  /* border: none; */
   border-color: black;
   border-radius: 8px;
   background-color: whitesmoke;

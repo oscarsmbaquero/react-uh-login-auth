@@ -8,6 +8,7 @@ import Details from "../Pages/Details/Details";
 import DetailsMoto from "../Pages/DetailsMoto/DetailsMoto";
 import AddPilots from "../Pages/AddPilots/AddPilots";
 import AddTeam from "../Pages/AddTeam/AddTeam";
+import EditPilots from "../Pages/EditPilots/EditPilots";
 
 const routes = [
   {
@@ -53,6 +54,11 @@ const routes = [
   {
     path: "/motos/:id",
     element: <DetailsMoto />,
+    isPrivate: true
+  },
+  {
+    path: "/edit/:id",
+    element: <EditPilots />,
     isPrivate: true
   },
 ];

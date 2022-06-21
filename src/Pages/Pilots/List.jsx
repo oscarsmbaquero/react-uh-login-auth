@@ -5,11 +5,6 @@ import { Link } from 'react-router-dom';
 import Swal from "sweetalert2"
 import SearchInput from '../../Components/Search/SearchInput';
 
-
-
-
-
-
 const List = () => {
    //Definimos el array de posts
    let [pilots, setPilots] = React.useState([]);
@@ -66,7 +61,7 @@ const List = () => {
        {isLoaded === false ? (
         <Loader />
       ) : (
-        <>        
+        <>
          { filteredPilots.map((post, key) => (
            <div key={ key } class="flip-container">
                 <div class="card">
@@ -78,6 +73,9 @@ const List = () => {
                             <Link to={`/pilots/name/${post.name}`}>
                               <button class="button">Más</button>
                             </Link>
+                            <Link to={`/edit/${post._id}`}>
+                              <button class="button">Edit</button>
+                            </Link>
                             <Link to={`/pilots/delete/${post._id}`}>
                               <button class="button" onClick={(e)=> deletePilot(e,post._id)}>Eliminar</button>
                             </Link>
@@ -86,6 +84,7 @@ const List = () => {
                           <p>{ post.name }</p> 
                           <p>{ post.dorsal }</p> 
                           <p>{ post.nacionality }</p>
+                          <p>{ post.moto?.length > 0 && post.moto[0].team}</p>
                         </div>
                     </div>
                 </div> 
