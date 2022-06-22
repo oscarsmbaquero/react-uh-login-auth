@@ -39,26 +39,26 @@ const AddTeam = () => {
     <div >
        <label>
            <p>Mark</p>
-           <input type="text" name="name" placeholder="Mark" {...register('mark', {
+           <input class="input" type="text" name="name" placeholder="Mark" {...register('mark', {
                required: 'Mark is required',
            })}/>
            {errors.name && errors.name.type === 'required' && <p>{errors.name.message}</p>}
        </label>
        <label>
            <p>C.V.</p>
-           <input type="number" name="cv" placeholder="C.V."  {...register('cv')}/>
+           <input class="input" type="number" name="cv" placeholder="C.V."  {...register('cv')}/>
        </label>
        <label>
            <p>Weight</p>
-           <input type="text" name="weight" placeholder="Weight"  {...register('weight')}/>
+           <input class="input" type="text" name="weight" placeholder="Weight"  {...register('weight')}/>
        </label>
        <label>
            <p>Team</p>
-           <input type="text" name="team" placeholder="Team"  {...register('team')}/>
+           <input  class="input" type="text" name="team" placeholder="Team"  {...register('team')}/>
        </label>
        <label>
            <p>Image</p>
-           <input type="text" name="image" placeholder="Url of image"  {...register('image')}/>
+           <input class="input" type="text" name="image" placeholder="Url of image"  {...register('image')}/>
        </label>
        <br></br>
        <button class="buttonForm"disabled={!isValid}>Send</button>

@@ -1,9 +1,11 @@
+import Swal from "sweetalert2";
+
 //const ROOT_URL = 'https://secret-hamlet-03431.herokuapp.com';
 const ROOT_URL = 'http://localhost:5000/users';
 //const ROOT_URL = 'https://motogp-oscar.herokuapp.com/users';
  
 export async function loginUser(dispatch, loginPayload) {
-  console.log(loginPayload,123);
+  //console.log(loginPayload,123);
   const requestOptions = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -31,25 +33,26 @@ export async function loginUser(dispatch, loginPayload) {
   }
 }
 
-export async function register(dispatch, loginPayload) {
-  console.log(loginPayload,123);
+export async function register(dispatch, RegisterPayload) {
+  console.log(RegisterPayload,123);
   const requestOptions = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(loginPayload),
-    
+    body: JSON.stringify(RegisterPayload),
   };
   
   try {
     dispatch({ type: 'REQUEST_REGISTER' });
     let response = await fetch(`${ROOT_URL}`, requestOptions);
     let data = await response.json();
-    console.log(data,'responsessssadasdasdasd');
+    Swal.fire("Creado", data.message,"success");
+    
  
     if (data) {
       console.log(data,'data')
       dispatch({ type: 'REGISTER_SUCCESS', payload: data });
       localStorage.setItem('currentUser', JSON.stringify(data));
+      console.log(data,'sucess');
       return data
     }
  

@@ -7,7 +7,7 @@ import SearchInput from '../../Components/Search/SearchInput';
 
 const List = () => {
    //Definimos el array de posts
-   let [pilots, setPilots] = React.useState([]);
+   let   [pilots, setPilots] = React.useState([]);
    const [keyword, setKeyword] = useState("");
    const [isLoaded, setIsLoaded] = useState(false);
 
@@ -20,9 +20,10 @@ const List = () => {
        .then(response => response.json())
        .then(data => setPilots(data))
    }, []);
+   console.log(pilots,'llego o no ')
    
    const deletePilot = (e, pilots) => {
-    console.log(pilots,6)
+   
     e.preventDefault();
 
     const thisClicked = e.currentTarget;

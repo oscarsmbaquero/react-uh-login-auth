@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser, useAuthState, useAuthDispatch,register } from "../../Context";
-import styles from "./login.module.css";
+import styles from "./login.module.scss";
 
 function Login(props) {
   const [email, setEmail] = useState();
@@ -25,6 +25,7 @@ function Login(props) {
   };
   const handleRegister = async (e) => {
     e.preventDefault();
+    console.log(email,password,'entro');
 
     try {
       let response = await register(dispatch, { email, password });
@@ -47,7 +48,7 @@ function Login(props) {
           <div className={styles.loginForm}>
             <div className={styles.loginFormItem}>
               <label  className={styles.label} htmlFor="email">Username</label>
-              <input
+              <input class={styles.input}
                 type="text"
                 id="email"
                 value={email}
@@ -57,7 +58,7 @@ function Login(props) {
             </div>
             <div className={styles.loginFormItem}>
               <label className={styles.label} htmlFor="password">Password</label>
-              <input
+              <input class={styles.input}
                 type="password"
                 id="password"
                 value={password}
@@ -66,10 +67,10 @@ function Login(props) {
               />
             </div>
           </div>
-          <button class="button"onClick={handleLogin} disabled={loading}>
+          <button className={styles.buttonForm} onClick={handleLogin} disabled={loading}>
             login
           </button>
-          <button class="button" onClick={handleRegister} disabled={loading}>
+          <button className={styles.buttonForm} onClick={handleRegister} disabled={loading}>
             Register
           </button>
         </form>

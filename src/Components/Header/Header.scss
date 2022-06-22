@@ -1,14 +1,14 @@
 .header {
     text-decoration: none;
     // background-color: whitesmoke;
-    background-image: transparent;
+    background-color: transparent;
     backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 60px;
-    box-shadow: 3px 3px red, -1em 0 0.4em olive;
+    //box-shadow: 3px 3px red, -1em 0 0.4em olive;
     
     }
     .image{
@@ -48,10 +48,13 @@
   color:black;
   font-size: 20px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-bottom: 4px solid transparent;
+
  }
  .p:hover{
-  background-color: black;
+  // background-color: black;
   color:whitesmoke;
+  border-bottom: 4px solid red;
  }
 
  .options{

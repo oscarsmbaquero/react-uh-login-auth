@@ -1,26 +1,31 @@
 .form{
-background-color: transparent;
- margin-top: 100px;
-display:flex;
-justify-content: center;
-align-items: center;
+  height: 500px;
+  width: 500px;
+  margin-left: 90rem;
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  
+  & p{
+      
+      font-family: Rockwell,"Times New Roman",serif;
+      font-size: 20px;
+  }
+}
+.input{
+  width: 300px;
+  height: 25px;
+  border-radius: 8px;
+  border-color: black;
+}
 
- & input{
-    margin-bottom: 0px;
- }
 .buttonForm{
-   
-    align-items: center;
-  width: 80px;
+  width: 90px;
   height: 30px;
-  margin-left: 10px;
-  border-color: brown;
-  border-radius: 15px;
+  margin: 20px 0 0 100px;
+  border-color:none;
+  border-radius: 8px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color:black;
   background-color:whitesmoke;    
-  margin-top: 15px;
-  margin-left: 30px;
-  
-}
 }

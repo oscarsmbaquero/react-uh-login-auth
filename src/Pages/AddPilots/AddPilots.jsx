@@ -31,29 +31,28 @@ const AddPilots = () => {
         
     }
   return (
-   
+        
     <form onSubmit={handleSubmit(onSubmit)} class="form">
      <div >
         <label>
             <p>Name</p>
-            <input type="text" name="name" placeholder="Name" {...register('name', {
+            <input class="input" type="text" name="name" placeholder="Name" {...register('name', {
                 required: 'Name is required',
                
             })}/>
             {errors.name && errors.name.type === 'required' && <p>{errors.name.message}</p>}
-            {errors.name && errors.name.type === 'pattern' && <p>{errors.name.message}</p>}
         </label>
         <label>
             <p>Dorsal</p>
-            <input type="number" name="dorsal" placeholder="Dorsal"  {...register('dorsal')}/>
+            <input class="input" type="number" name="dorsal" placeholder="Dorsal"  {...register('dorsal')}/>
         </label>
         <label>
             <p>Nacionality</p>
-            <input type="text" name="nacionality" placeholder="Nacionality"  {...register('nacionality')}/>
+            <input class="input" type="text" name="nacionality" placeholder="Nacionality"  {...register('nacionality')}/>
         </label>
         <label>
             <p>Image</p>
-            <input type="text" name="image" placeholder="Url of image"  {...register('image')}/>
+            <input class="input" type="text" name="image" placeholder="Url of image"  {...register('image')}/>
         </label>
         <br></br>
         <button class="buttonForm"disabled={!isValid}>Send</button>
