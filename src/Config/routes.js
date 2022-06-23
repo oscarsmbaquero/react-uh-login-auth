@@ -9,6 +9,7 @@ import DetailsMoto from "../Pages/DetailsMoto/DetailsMoto";
 import AddPilots from "../Pages/AddPilots/AddPilots";
 import AddTeam from "../Pages/AddTeam/AddTeam";
 import EditPilots from "../Pages/EditPilots/EditPilots";
+import EditMoto from "../Pages/EditMoto/EditMoto";
 
 const routes = [
   {
@@ -59,6 +60,11 @@ const routes = [
   {
     path: "/edit/:id",
     element: <EditPilots />,
+    isPrivate: true
+  },
+  {
+    path: "/edit/moto/:id",
+    element: <EditMoto />,
     isPrivate: true
   },
 ];

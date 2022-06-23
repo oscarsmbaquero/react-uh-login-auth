@@ -51,13 +51,12 @@
   
   .back {
     background-color: transparent;
-    color: red;
     transform: rotateY(180deg);
     text-align:center;
    
 
     & p{
-      color:red;
+      color:black;
       font-family: 'Times New Roman', Times, serif;
     }
    

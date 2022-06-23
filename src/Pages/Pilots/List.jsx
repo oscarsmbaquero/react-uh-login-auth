@@ -4,6 +4,16 @@ import Loader from "../../Components/Loader/Loader";
 import { Link } from 'react-router-dom';
 import Swal from "sweetalert2"
 import SearchInput from '../../Components/Search/SearchInput';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
+import AddIcon from '@mui/icons-material/Add';
+//import CreateIcon from '@mui/icons-material/Create';
+
+//import { Button } from '@mui/material';
+import { Create } from '@mui/icons-material';
+
+//import { DeleteIcon}   from '@material-ui/icons/DeleteIcon';
+
 
 const List = () => {
    //Definimos el array de posts
@@ -71,14 +81,25 @@ const List = () => {
                     </div>
                     <div class="back">
                         <div class="buttons2">
+                            <IconButton onClick={(e)=> deletePilot(e,post._id)}
+                                 aria-label="delete" 
+                                 size="large" 
+                                 color="error"
+                                 ><DeleteIcon fontSize="inherit" />
+                            </IconButton>
                             <Link to={`/pilots/name/${post.name}`}>
-                              <button class="button">Más</button>
+                              <IconButton  
+                                 aria-label="delete" 
+                                 color="success" 
+                                 ><AddIcon />
+                              </IconButton>
                             </Link>
                             <Link to={`/edit/${post._id}`}>
-                              <button class="button">Edit</button>
-                            </Link>
-                            <Link to={`/pilots/delete/${post._id}`}>
-                              <button class="button" onClick={(e)=> deletePilot(e,post._id)}>Eliminar</button>
+                              <IconButton  
+                                 aria-label="delete" 
+                                 color="secondary" 
+                                 ><Create />
+                              </IconButton>
                             </Link>
                         </div>
                         <div>

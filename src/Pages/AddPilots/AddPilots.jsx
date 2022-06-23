@@ -3,6 +3,9 @@ import { useForm } from 'react-hook-form'
 import {  useNavigate } from "react-router-dom";
 import './AddPilots.scss';
 
+//import { Container, FormControl, InputLabel, Input, FormHelperText} from '@mui/material/FormControl';
+
+
 
 const AddPilots = () => {
 
@@ -31,7 +34,7 @@ const AddPilots = () => {
         
     }
   return (
-        
+    
     <form onSubmit={handleSubmit(onSubmit)} class="form">
      <div >
         <label>
@@ -55,6 +58,7 @@ const AddPilots = () => {
             <input class="input" type="text" name="image" placeholder="Url of image"  {...register('image')}/>
         </label>
         <br></br>
+        
         <button class="buttonForm"disabled={!isValid}>Send</button>
         </div>
     </form>

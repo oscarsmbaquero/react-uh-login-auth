@@ -5,6 +5,11 @@ import { Link } from 'react-router-dom';
 import Swal from "sweetalert2"
 import SearchInput from '../../Components/Search/SearchInput';
 
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
+import AddIcon from '@mui/icons-material/Add';
+import { Create } from '@mui/icons-material';
+
 const Motos = () => {
 
     let [motos, SetMotos] = React.useState([]);
@@ -68,11 +73,25 @@ const Motos = () => {
                         </div>  
                         <div class="back">
                         <div class="buttons2">
+                        <IconButton onClick={(e)=> deleteMoto(e,post._id)}
+                                 aria-label="delete" 
+                                 size="large" 
+                                 color="error"
+                                 ><DeleteIcon fontSize="inherit" />
+                            </IconButton>
                             <Link to={`/motos/${post._id}`}>
-                              <button class="button">Más</button>
+                              <IconButton  
+                                 aria-label="delete" 
+                                 color="success" 
+                                 ><AddIcon />
+                              </IconButton>
                             </Link>
-                            <Link to={`/pilots/delete/${post._id}`}>
-                              <button class="button" onClick={(e)=> deleteMoto(e,post._id)}>Eliminar</button>
+                            <Link to={`/edit/moto/${post._id}`}>
+                              <IconButton  
+                                 aria-label="delete" 
+                                 color="secondary" 
+                                 ><Create />
+                              </IconButton>
                             </Link>
                         </div>
                             <p>{ post.mark }</p> 
