@@ -25,7 +25,7 @@ const Details = () => {
           <div class="details__text">
             <h1> {pilot.data.pilot[0].name}</h1>
             <h2> {pilot.data.pilot[0].dorsal}</h2>
-            <p>  {pilot.data.pilot[0].nacionality}</p>
+            <h3>  {pilot.data.pilot[0].nacionality}</h3>
             <p>  {pilot.data.pilot[0].moto[0]?.team.length > 0 && pilot.data.pilot[0].moto[0].team}</p>
           </div>
           <div class="details__image">
