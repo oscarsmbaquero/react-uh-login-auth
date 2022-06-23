@@ -22,7 +22,7 @@ const EditMoto = () => {
             console.log(formData,'datos');
             try {
     
-                const result = await fetch(`http://localhost:5000/motos/modify/${id}` ,{
+                const result = await fetch(`https://motogp-oscar.herokuapp.com/motos/modify/${id}` ,{
                     method: "PUT",
                     headers: {
                             'Content-Type': 'application/json'
@@ -46,7 +46,7 @@ const EditMoto = () => {
     <form onSubmit={handleSubmit(onSubmit)} class="form">
      <div >
         <label>
-            <p>Name</p>
+            <p>Mark</p>
             <input class="input" {...setValue("mark", moto.data.moto.mark)} type="text" name="name" placeholder="Mark of team"  {...register('mark', {
                
                 required: 'Name is required',
@@ -55,15 +55,15 @@ const EditMoto = () => {
             {errors.name && errors.name.type === 'required' && <p>{errors.name.message}</p>}
         </label>
         <label>
-            <p>Dorsal</p>
+            <p>CV</p>
             <input class="input" {...setValue("cv", moto.data.moto.cv)} type="number" name="cv" placeholder="CV"   {...register('cv')}/>
         </label>
         <label>
-            <p>Nationality</p>
+            <p>Weight</p>
             <input class="input" {...setValue("weight", moto.data.moto.weight)} type="text" name="weight" placeholder="Weight"  {...register('weight')}/>
         </label>
         <label>
-            <p>Nationality</p>
+            <p>Team</p>
             <input class="input" {...setValue("team", moto.data.moto.team)} type="text" name="team" placeholder="Team"  {...register('team')}/>
         </label>
         <label>

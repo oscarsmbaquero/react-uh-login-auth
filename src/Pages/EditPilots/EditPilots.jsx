@@ -14,7 +14,7 @@ export const EditPilots = () => {
 
     useEffect(() => {
     
-        fetch(`http://localhost:5000/pilots/${id}`)
+        fetch(`https://motogp-oscar.herokuapp.com/pilots/${id}`)
           .then(response => response.json())
           .then(data => setPilot(data))
          }, [id]); 

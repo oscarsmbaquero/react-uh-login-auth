@@ -31,8 +31,8 @@ function Login(props) {
       let response = await register(dispatch, { email, password });
        console.log(response,'response-index');
       if (!response) return;
-      navigate("/dashboard");
-      console.log('dashboard');
+      // navigate("/dashboard");
+      // console.log('dashboard');
     } catch (error) {
       console.log(error);
     }

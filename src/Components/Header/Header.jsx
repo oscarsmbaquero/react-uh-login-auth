@@ -58,17 +58,15 @@ const Header = () => {
     logout(dispatch); //llama a la acción logout
     navigate("/"); //navega de nuevo al login sin usuario
   };
-
   
   return (
-    <ContextI18n.Provider value={{ locale, selectLanguage }}>
+      <ContextI18n.Provider value={{ locale, selectLanguage }}>
           <IntlProvider locale={locale} messages={messages}>
                 <>
                 { userLogger ? 
                 <header className="header">
                     <div >
                       <img  src ="/images/fondoMotogp.png" class="image" alt="motogp"/>
-                        {/* <img  src ="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/95/52/6d/95526ddc-639b-ab76-2796-296bf559ee0f/AppIcon-1x_U007emarketing-0-8-0-85-220.png/1200x630wa.png" class="image" alt="motogp"/>       */}
                     </div>
                     <div class="options">
                       <div>

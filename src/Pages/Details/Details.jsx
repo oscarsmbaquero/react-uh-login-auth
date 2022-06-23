@@ -13,7 +13,7 @@ const Details = () => {
 
   useEffect(() => {
     
-    fetch(`http://localhost:5000/pilots/name/${name}`)
+    fetch(`https://motogp-oscar.herokuapp.com/pilots/${name}`)
       .then(response => response.json())
       .then(data => setPilot(data))
      }, [name]); 

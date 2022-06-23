@@ -26,7 +26,7 @@ const List = () => {
   }, 3000);
  
    useEffect(() => {
-     fetch('http://localhost:5000/pilots')
+     fetch('https://motogp-oscar.herokuapp.com/pilots')
        .then(response => response.json())
        .then(data => setPilots(data))
    }, []);

@@ -6,6 +6,7 @@ import { AuthProvider } from "./Context";
 
 
 import Header from "./Components/Header/Header";
+// import Footer from "./Components/Footer/";
 import './App.scss';
 
 function App() {  

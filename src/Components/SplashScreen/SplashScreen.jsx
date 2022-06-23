@@ -6,12 +6,13 @@ const SplashScreen = () => {
 
   useEffect(() => {
     setTimeout(() => setAnimation("fadeOut"), 3000);
+    //https://images-na.ssl-images-amazon.com/images/I/41t8oP3wO8L.png
   }, []);
 
   return (
     <div className="splashScreen">
       <div className={animation}>
-        <img  src ="/images/fondoMotogp.png" className="image" alt="motogp"/>
+        <img  src ="https://images-na.ssl-images-amazon.com/images/I/41t8oP3wO8L.png" className="image" alt="motogp"/>
         {/* <div  class="image">
           <img  src ="/images/fondoMotogp.png" className="image" alt="motogp"/>
         </div> */}

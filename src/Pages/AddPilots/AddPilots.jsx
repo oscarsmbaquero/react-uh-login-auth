@@ -15,7 +15,7 @@ const AddPilots = () => {
         console.log(formData);
         try {
 
-            const result = await fetch("http://localhost:5000/pilots" ,{
+            const result = await fetch("https://motogp-oscar.herokuapp.com/pilots" ,{
                 method: "POST",
                 headers: {
                         'Content-Type': 'application/json'

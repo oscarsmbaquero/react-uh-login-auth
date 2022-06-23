@@ -10,7 +10,7 @@ const DetailsMoto = () => {
 
   useEffect(() => {
     
-    fetch(`http://localhost:5000/motos/${id}`)
+    fetch(`https://motogp-oscar.herokuapp.com/motos/${id}`)
       .then(response => response.json())
       .then(data => SetMotos(data))      
      }, [id]); 
@@ -20,9 +20,9 @@ const DetailsMoto = () => {
   { !moto ? <p>Cargando...</p> : <>
   <div class="details">
       <div class="details__text">      
-          <h1> {moto.data.moto.mark}</h1>
-          <h2> {moto.data.moto.cv}</h2>          
-          <h2> {moto.data.moto.weight}</h2>
+          <h1> mark: {moto.data.moto.mark}</h1>
+          <h2> cv:{moto.data.moto.cv}</h2>          
+          <h2> weight:{moto.data.moto.weight}</h2>
           <p>  {moto.data.moto.team}</p>          
        </div>
        <div  class="details__image">

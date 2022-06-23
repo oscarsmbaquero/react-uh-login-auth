@@ -15,7 +15,7 @@ const AddTeam = () => {
         console.log(formData);
         try {
 
-            const result = await fetch("http://localhost:5000/motos" ,{
+            const result = await fetch("https://motogp-oscar.herokuapp.com/motos" ,{
                 method: "POST",
                headers: {
                         'Content-Type': 'application/json'

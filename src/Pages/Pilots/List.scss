@@ -45,12 +45,14 @@
   }
   
   .front {
+    
     color: white;
     display: flex;
   }
   
   .back {
-    background-color: transparent;
+    border: 2px solid ;
+    border-color: whitesmoke;
     transform: rotateY(180deg);
     text-align:center;
    
