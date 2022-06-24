@@ -22,7 +22,7 @@ const EditMoto = () => {
             console.log(formData,'datos');
             try {
     
-                const result = await fetch(`https://motogp-oscar.herokuapp.com/motos/modify/${id}` ,{
+                const result = await fetch(`https://motogp-oscar.herokuapp.com/motos/modify/${id}` ,{//modifico url 24/06/2022
                     method: "PUT",
                     headers: {
                             'Content-Type': 'application/json'
