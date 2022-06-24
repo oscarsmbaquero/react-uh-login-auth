@@ -73,7 +73,7 @@ const Header = () => {
                           <Link to="/list">
                               <p class="p">
                                 <FormattedMessage id="app.pilots"/>
-                              </p>              
+                              </p>
                           </Link>
                       </div>
                       <span class="span">/</span>
@@ -81,7 +81,7 @@ const Header = () => {
                             <Link to="/motos">
                           <p class="p">
                             <FormattedMessage id="app.motos"/>
-                          </p>               
+                          </p>
                             </Link>
                       </div>
                       <span class="span">/</span>
@@ -89,15 +89,15 @@ const Header = () => {
                             <Link to="/circuits">
                               <p class="p">
                                   <FormattedMessage id="app.circuits"/>
-                              </p>              
+                              </p>
                             </Link>
                       </div>
                       <span class="span">/</span>
-                      <div>     
+                      <div>
                             <Link to="/addMoto">
                               <p class="p">
                                   <FormattedMessage id="app.addMoto"/>
-                              </p>                
+                              </p>
                             </Link>
                       </div> 
                       <span class="span">/</span>
@@ -105,7 +105,7 @@ const Header = () => {
                             <Link to="/addPilot">
                               <p class="p">
                                   <FormattedMessage id="app.addPilot"/>
-                              </p>                
+                              </p>
                             </Link>
                       </div> 
                     </div>
@@ -115,11 +115,11 @@ const Header = () => {
                     <div class="logout">
                         <p> {userDetails.user.email}</p>
                         <button class="button__logout"  onClick={handleLogout}><GoSignOut  /></button>
-                    </div>    
+                    </div>
                     
                 </header> : '' }
                 </>  
-          </IntlProvider>    
+          </IntlProvider>
       </ContextI18n.Provider>
 
     

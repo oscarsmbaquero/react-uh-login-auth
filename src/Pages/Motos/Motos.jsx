@@ -21,7 +21,7 @@ const Motos = () => {
     }, 3000);
 
    useEffect(() => {
-    fetch('http://localhost:5000/motos')
+    fetch('https://motogp-oscar.herokuapp.com/motos')
       .then(response => response.json())
       .then(data => SetMotos(data))
   }, []);
