@@ -13,7 +13,7 @@ const EditMoto = () => {
 
     useEffect(() => {
     
-        fetch(`http://localhost:5000/motos/${id}`)
+        fetch(`https://motogp-oscar.herokuapp.com/motos/${id}`)
           .then(response => response.json())
           .then(data => setMoto(data))
          }, [id]); 
