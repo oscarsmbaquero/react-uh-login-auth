@@ -25,7 +25,7 @@ export const EditPilots = () => {
         console.log(formData,'datos');
         try {
 
-            const result = await fetch(`http://localhost:5000/pilots/modify/${id}` ,{
+            const result = await fetch(`https://motogp-oscar.herokuapp.com/pilots/modify/${id}` ,{
                 method: "PUT",
                 headers: {
                         'Content-Type': 'application/json'
